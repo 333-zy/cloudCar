@@ -5,8 +5,7 @@
 			"style": {
 				"navigationBarTitleText": "登录"
 			}
-		},
-		{
+		}, {
 			"path": "pages/main/main",
 			"style": {
 				"navigationBarTitleText": "首页"
