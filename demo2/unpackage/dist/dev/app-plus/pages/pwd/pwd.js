@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"input-row wx-button{ height: ",[0,60],"; line-height: ",[0,60],"; margin-top: ",[0,8],"; background-color: #0faeff; margin-right: ",[0,10],"; font-size: ",[0,26],"; }\n",],undefined,{path:"./pages/pwd/pwd.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/pwd/pwd.wxml') } }));
