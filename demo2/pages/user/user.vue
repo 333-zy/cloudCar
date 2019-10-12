@@ -1,67 +1,19 @@
 <template>
 	<view class="content">
-		<ul>
-			 <li class="headPortrait">
-			 	<view class="">
-			 		头像
-			 	</view>
-			 </li>
-			<li>
-				<view class="">
-					图标
+		<view class="top-img">
+			<image src="../../static/img/qq.png" mode="aspectFit"></image>
+		</view>
+		<view class="uni-list">
+			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(item,index) in list" :key="index">
+				<view class="uni-media-list">
+					<image class="uni-media-list-logo" src="../../static/img/homeHL.png"></image>
+					<view class="uni-media-list-body">
+						{{item.name}}
+					</view>
+					<image class="uni-media-list-logo" src="../../static/img/user.png"></image>
 				</view>
-				<view class="link">
-					宝宝信息
-				</view>
-				<view class="">
-					>
-				</view>
-			</li>
-			<li>
-				<view class="">
-					图标
-				</view>
-				<view class="link">
-					我的信息
-				</view>
-				<view class="">
-					>
-				</view>
-			</li>
-			<li>
-				<view class="">
-					图标
-				</view>
-				<view class="link">
-					我的咨询
-				</view>
-				<view class="">
-					>
-				</view>
-			</li>
-			<li>
-				<view class="">
-					图标
-				</view>
-				<view class="link">
-					自查记录
-				</view>
-				<view class="">
-					>
-				</view>
-			</li>
-			<li>
-				<view class="">
-					图标
-				</view>
-				<view class="link">
-					意见反馈
-				</view>
-				<view class="">
-					>
-				</view>
-			</li>
-		</ul>
+			</view>
+		</view>
 		<view class="btn-row">
 			<!-- <button v-if="!hasLogin" type="primary" class="primary" @tap="bindLogin">登录</button>
 			<button v-if="hasLogin" type="default" @tap="bindLogout">退出登录</button> -->
@@ -79,6 +31,36 @@
 	export default {
 		computed: {
 			...mapState(['hasLogin', 'forcedLogin'])
+		},
+		data() {
+			return {
+				list: [{
+						name: '宝宝信息',
+						url: '',
+						imgUrl: ''
+					},
+					{
+						name: '我的信息',
+						url: '',
+						imgUrl: ''
+					},
+					{
+						name: '我的咨询',
+						url: '',
+						imgUrl: ''
+					},
+					{
+						name: '自查记录',
+						url: '',
+						imgUrl: ''
+					},
+					{
+						name: '意见反馈',
+						url: '',
+						imgUrl: ''
+					},
+				]
+			}
 		},
 		methods: {
 			...mapMutations(['logout']),
@@ -104,17 +86,24 @@
 </script>
 
 <style>
-	li {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		border-bottom: 1upx solid #D9D9D9;
-		height: 70upx;
-		line-height: 70upx;
-		padding: 0 20upx;
+	.top-img{
+		text-align: center;
+		padding: 20upx;
+		height: 200upx;
+	}
+	
+	.top-img image{
+		margin-top: 30upx;
+		width: 150upx;
+		height: 150upx;
+		border: 1upx solid #C0C0C0;
+		border-radius: 50%;
+	}
+	.uni-media-list {
+		padding: 5upx 20upx;
 	}
 
-	.link {
-		width: 80%;
+	.uni-media-list-body {
+		line-height: 3em;
 	}
 </style>

@@ -2,7 +2,7 @@
 	<view class="content">
 		<navigator v-for="i in 5" url="rowthRecord">
 				<view class="">
-					小明
+					小明{{i}}
 				</view>
 				<view class="">
 					点击进入
@@ -31,7 +31,6 @@ navigator {
 		justify-content: space-between;
 		border-bottom: 1upx solid #D9D9D9;
 		height: 70upx;
-		line-height: 70upx;
 		padding: 0 20upx;
 	}
 </style>

@@ -1,0 +1,1 @@
+<view class="content"><block wx:for="{{5}}" wx:for-item="i" wx:for-index="__i0__"><navigator url="rowthRecord"><view>{{'小明'+i+''}}</view><view>点击进入</view></navigator></block></view>

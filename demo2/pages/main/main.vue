@@ -1,97 +1,44 @@
 <template>
 	<view class="content">
-		<!-- <view v-if="hasLogin" class="hello">
-            <view class="title">
-                您好 {{userName}}，您已成功登录。
-            </view>
-            <view class="ul">
-                <view>这是 uni-app 带登录模板的示例App首页。</view>
-                <view>在 “我的” 中点击 “退出” 可以 “注销当前账户”</view>
-            </view>
-        </view>
-        <view v-if="!hasLogin" class="hello">
-            <view class="title">
-                您好 游客。
-            </view>
-            <view class="ul">
-                <view>这是 uni-app 带登录模板的示例App首页。</view>
-                <view>在 “我的” 中点击 “登录” 可以 “登录您的账户”</view>
-            </view>
-        </view> -->
-		<view class="content">
-			<view class="top-img">
+		<view class="top-img">
 
+		</view>
+		<view class="navigation-function">
+			<view class="navigation-function-top">
+				<navigator v-if="index<2" v-for="(item,index) in list" :key="index" :style="{'background':item.color}" :url="item.url"
+				 class="navigation-function-button">
+					<view class="icon">
+						{{item.inco}}
+					</view>
+					<view class="text">
+						{{item.name}}
+					</view>
+				</navigator>
 			</view>
-			<view class="navigation-function">
-				<view class="navigation-function-top">
-					<view class="navigation-function-top-left li">
-						<view class="icon">
-							图标
-						</view>
-						<view class="text">
-							儿童自查
-						</view>
+			<view class="navigation-function-buttom">
+				<navigator v-if="index>1" v-for="(item,index) in list" :key="index" :style="{'background':item.color}" :url="item.url"
+				 class="navigation-function-button">
+					<view class="icon">
+						{{item.inco}}
 					</view>
-					<navigator class="navigation-function-top-right li" url="../rowthRecord/babyInfo">
-						<view class="icon">
-							图标
-						</view>
-						<view class="text">
-							生长记录
-						</view>
-					</navigator>
-				</view>
-				<view class="navigation-function-buttom">
-					<view class="navigation-function-buttom-1 li">
-						<view class="icon">
-							图标
-						</view>
-						<view class="text">
-							健康宣教
-						</view>
+					<view class="text">
+						{{item.name}}
 					</view>
-					<view class="navigation-function-buttom-2 li">
-						<view class="icon">
-							图标
-						</view>
-						<view class="text">
-							学术交流
-						</view>
-					</view>
-					<view class="navigation-function-buttom-3 li">
-						<view class="icon">
-							图标
-						</view>
-						<view class="text">
-							附近医院
-						</view>
-					</view>
-					<view class="navigation-function-buttom-4 li">
-						<view class="icon">
-							图标
-						</view>
-						<view class="text">
-							合作伙伴
-						</view>
-					</view>
-				</view>
+				</navigator>
 			</view>
-			<view class="buttomList">
-				<view class="">
-					最新资讯
+		</view>
+		<view class="newConsulting">
+			最新咨询
+		</view>
+		<view class="uni-list">
+			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(item,index) in 13" :key="index">
+				<view class="uni-media-list">
+					<image class="uni-media-list-logo" src="../../static/img/user.png"></image>
+					<view class="uni-media-list-body">
+						<view class="uni-media-list-text-top">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
+						<view class="uni-media-list-text-bottom">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
+					</view>
 				</view>
-				<ul>
-					<li v-for="i in 10">
-						<view class="newImg">
-							图片
-						</view>
-						<view class="buttomListRighr">
-							<view class="newTitie">
-								大撒大撒大撒大撒大
-							</view>
-						</view>
-					</li>
-				</ul>
 			</view>
 		</view>
 	</view>
@@ -104,72 +51,79 @@
 
 	export default {
 		computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
-		onLoad() {
-			if (!this.hasLogin) {
-				uni.showModal({
-					title: '未登录',
-					content: '您未登录，需要登录后才能继续',
-					/**
-					 * 如果需要强制登录，不显示取消按钮
-					 */
-					showCancel: !this.forcedLogin,
-					success: (res) => {
-						if (res.confirm) {
-							/**
-							 * 如果需要强制登录，使用reLaunch方式
-							 */
-							if (this.forcedLogin) {
-								uni.reLaunch({
-									url: '../login/login'
-								});
-							} else {
-								uni.navigateTo({
-									url: '../login/login'
-								});
-							}
-						}
+		data() {
+			return {
+				list: [{
+						inco: '图标',
+						name: '儿童自查',
+						color: '#EB6DA5',
+						url: '../childrenSwn/babyInformation'
+					},
+					{
+						inco: '图标',
+						name: '生长记录',
+						color: '#4FC1E9',
+						url: '../rowthRecord/babyInfo'
+					},
+					{
+						inco: '图标',
+						name: '健康宣教',
+						color: '#307DC1',
+						url: '../healthEducation/healthEducation'
+					},
+					{
+						inco: '图标',
+						name: '学术交流',
+						color: '#BAA8EB',
+						url: '../academicCommunication/academicCommunication'
+					},
+					{
+						inco: '图标',
+						name: '附近医院',
+						color: '#3BCEAC',
+						url: '../nearHospital/nearHospital'
+					},
+					{
+						inco: '图标',
+						name: '合作伙伴',
+						color: '#6BD425',
+						url: ''
 					}
-				});
+				]
 			}
-		}
+		},
+		// onLoad() {
+		// 	if (!this.hasLogin) {
+		// 		uni.showModal({
+		// 			title: '未登录',
+		// 			content: '您未登录，需要登录后才能继续',
+		// 			/**
+		// 			 * 如果需要强制登录，不显示取消按钮
+		// 			 */
+		// 			showCancel: !this.forcedLogin,
+		// 			success: (res) => {
+		// 				if (res.confirm) {
+		// 					/**
+		// 					 * 如果需要强制登录，使用reLaunch方式
+		// 					 */
+		// 					if (this.forcedLogin) {
+		// 						uni.reLaunch({
+		// 							url: '../login/login'
+		// 						});
+		// 					} else {
+		// 						uni.navigateTo({
+		// 							url: '../login/login'
+		// 						});
+		// 					}
+		// 				}
+		// 			}
+		// 		});
+		// 	}
+		// }
 	}
 </script>
 
 <style>
-	.newImg {
-		margin-right: 20upx;
-	}
-
-	li {
-		display: flex;
-		flex-direction: row;
-		border-top: 1upx solid #D9D9D9;
-		height: 100upx;
-		line-height: 100upx;
-		padding: 20upx;
-	}
-
-	.hello {
-		display: flex;
-		flex: 1;
-		flex-direction: column;
-	}
-
-	.title {
-		color: #8f8f94;
-		margin-top: 50upx;
-	}
-
-	.ul {
-		font-size: 30upx;
-		color: #8f8f94;
-		margin-top: 50upx;
-	}
-
-	.ul>view {
-		line-height: 50upx;
-	}
-
 	.top-img {
 		height: 400upx;
 		background: #C8C7CC;
@@ -186,54 +140,16 @@
 		margin-bottom: 10upx;
 	}
 
-	.navigation-function-top-left {
+	.navigation-function-button {
 		width: 100%;
 		height: 150upx;
-		background: #EB6DA5;
-	}
-
-	.navigation-function-top-right {
-		width: 100%;
-		height: 150upx;
-		background: #4FC1E9;
+		margin: 0 5upx;
 	}
 
 	.navigation-function-buttom {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-	}
-
-	.navigation-function-buttom-1 {
-		width: 100%;
-		height: 150upx;
-		background: #307DC1;
-	}
-
-	.navigation-function-buttom-2 {
-		width: 100%;
-		height: 150upx;
-		background: #BAA8EB;
-	}
-
-	.navigation-function-buttom-3 {
-		width: 100%;
-		height: 150upx;
-		background: #3BCEAC;
-	}
-
-	.navigation-function-buttom-4 {
-		width: 100%;
-		height: 150upx;
-		background: #6BD425;
-	}
-
-	.li {
-		margin: 0 5upx;
-	}
-
-	.icon {
-		margin-top: 50upx;
 	}
 
 	.icon,
@@ -243,7 +159,15 @@
 		font-size: 30upx;
 	}
 
-	.buttomList {
-		padding: 15upx;
+	.newConsulting {
+		padding: 0 20upx;
+	}
+
+	.uni-media-list-text-top,
+	.uni-media-list-text-bottom {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+		overflow: hidden;
 	}
 </style>
