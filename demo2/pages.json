@@ -73,6 +73,70 @@
             "style" : {
 				"navigationBarTitleText": "附近医院"
 			}
+        },{
+            "path" : "pages/user/userBabyInfo/userBabyInfo",
+            "style" : {
+				"navigationBarTitleText": "宝宝信息"
+			}
+        },{
+            "path" : "pages/user/userBabyInfo/basicInformationOfBaby",
+            "style" : {
+				"navigationBarTitleText": "宝宝基本信息"
+			}
+        },{
+            "path" : "pages/user/userBabyInfo/setBabyInfo",
+            "style" : {
+				"navigationBarTitleText": "修改基本信息"
+			}
+        }
+		
+        ,{
+            "path" : "pages/user/myInformation/myInformation",
+            "style" : {
+            	"navigationBarTitleText": "我的信息"
+            }
+        },
+		{
+		    "path" : "pages/user/myInformation/setMyInformation",
+		    "style" : {
+		    	"navigationBarTitleText": "修改基本信息"
+		    }
+		}
+        ,{
+            "path" : "pages/user/myAdvice/myAdvice",
+            "style" : {
+            	"navigationBarTitleText": "我的咨询"
+            }
+        },
+		{
+		    "path" : "pages/user/myAdvice/detailsOfInquiryReply",
+		    "style" : {
+		    	"navigationBarTitleText": "咨询回复详情"
+		    }
+		},
+		{
+		    "path" : "pages/user/myAdvice/lmmediatelyConsult",
+		    "style" : {
+		    	"navigationBarTitleText": "立即咨询"
+		    }
+		}
+        ,{
+            "path" : "pages/user/inspectionRecords/inspectionRecords",
+            "style" : {
+            	"navigationBarTitleText": "自查记录"
+            }
+        }
+        ,{
+            "path" : "pages/user/feedback/feedback",
+            "style" : {
+            	"navigationBarTitleText": "意见反馈"
+            }
+        }
+        ,{
+            "path" : "pages/partners/partners",
+            "style" : {
+				"navigationBarTitleText":"合作伙伴"
+			}
         }
     ],
 	"tabBar": {

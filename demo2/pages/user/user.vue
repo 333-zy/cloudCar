@@ -4,7 +4,7 @@
 			<image src="../../static/img/qq.png" mode="aspectFit"></image>
 		</view>
 		<view class="uni-list">
-			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(item,index) in list" :key="index">
+			<view class="uni-list-cell" hover-class="uni-list-cell-hover" @tap="toUserBabyInfo(item.url)" v-for="(item,index) in list" :key="index">
 				<view class="uni-media-list">
 					<image class="uni-media-list-logo" src="../../static/img/homeHL.png"></image>
 					<view class="uni-media-list-body">
@@ -36,27 +36,27 @@
 			return {
 				list: [{
 						name: '宝宝信息',
-						url: '',
+						url: 'userBabyInfo/userBabyInfo',
 						imgUrl: ''
 					},
 					{
 						name: '我的信息',
-						url: '',
+						url: 'myInformation/myInformation',
 						imgUrl: ''
 					},
 					{
 						name: '我的咨询',
-						url: '',
+						url: 'myAdvice/myAdvice',
 						imgUrl: ''
 					},
 					{
 						name: '自查记录',
-						url: '',
+						url: 'inspectionRecords/inspectionRecords',
 						imgUrl: ''
 					},
 					{
 						name: '意见反馈',
-						url: '',
+						url: 'feedback/feedback',
 						imgUrl: ''
 					},
 				]
@@ -80,6 +80,11 @@
 						url: '../login/login',
 					});
 				}
+			},
+			toUserBabyInfo(e){
+				uni.navigateTo({
+					url:e
+				})
 			}
 		}
 	}

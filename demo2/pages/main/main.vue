@@ -87,7 +87,7 @@
 						inco: '图标',
 						name: '合作伙伴',
 						color: '#6BD425',
-						url: ''
+						url: '../partners/partners'
 					}
 				]
 			}
