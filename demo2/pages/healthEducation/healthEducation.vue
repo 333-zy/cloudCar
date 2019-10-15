@@ -4,7 +4,7 @@
 			科普知识
 		</view>
 		<view class="uni-list">
-			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-if="index<2" v-for="(item,index) in 13" :key="index">
+			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-if="index<2" v-for="(item,index) in 13" :key="index" @click="toHealthEducationDetails('标题')">
 				<view class="uni-media-list">
 					<image class="uni-media-list-logo" src="../../static/img/user.png"></image>
 					<view class="uni-media-list-body">
@@ -14,7 +14,7 @@
 				</view>
 			</view>
 		</view>
-		<navigator url="">
+		<navigator url="healthEducationList?name=科普知识">
 			<view class="">
 				查看更多
 			</view>
@@ -27,7 +27,7 @@
 			常见疾病
 		</view>
 		<view class="uni-list">
-			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-if="index<2" v-for="(item,index) in 13" :key="index">
+			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-if="index<2" v-for="(item,index) in 13" :key="index" @click="toHealthEducationDetails('标题')">
 				<view class="uni-media-list">
 					<image class="uni-media-list-logo" src="../../static/img/user.png"></image>
 					<view class="uni-media-list-body">
@@ -37,7 +37,7 @@
 				</view>
 			</view>
 		</view>
-		<navigator url="">
+		<navigator url="healthEducationList?name=常见疾病">
 			<view class="">
 				查看更多
 			</view>
@@ -49,6 +49,15 @@
 </template>
 
 <script>
+	export default{
+		methods:{
+			toHealthEducationDetails(e){
+				uni.navigateTo({
+					url:'healthEducationDetails?name='+e
+				})
+			}
+		}
+	}
 </script>
 
 <style>

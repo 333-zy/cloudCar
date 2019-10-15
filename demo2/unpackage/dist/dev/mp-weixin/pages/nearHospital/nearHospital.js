@@ -126,31 +126,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var _default =
 {
+  onLoad: function onLoad() {
+    uni.createMapContext();
+  },
   data: function data() {
-    return {};
+    return {
+      title: 'map',
+      latitude: 29.60661,
+      longitude: 106.57439,
+      controls: [{ //在地图上显示控件，控件不随着地图移动
+        id: 1, //控件id,
+        // iconPath: '/static/img/qq.png',
+        clickable: true,
+        position: { //控件在地图的位置
+          left: 10,
+          top: 10,
+          width: 100,
+          height: 100 } }] };
+
 
 
   },
-  onLoad: function onLoad() {
-    uni.getLocation({
+  onReady: function onReady() {
+    var umap = uni.createMapContext('uniMap', this);
+    umap.getCenterLocation({
       type: 'wgs84',
       success: function success(res) {
+        console.log(res);
         console.log('当前位置的经度：' + res.longitude);
         console.log('当前位置的纬度：' + res.latitude);
       } });
 
-    // uni.chooseLocation({
-    // 	success: function(res) {
-    // 		console.log('位置名称：' + res.name);
-    // 		console.log('详细地址：' + res.address);
-    // 		console.log('纬度：' + res.latitude);
-    // 		console.log('经度：' + res.longitude);
-    // 	}
-    // });
+    umap.includePoints({
+      points: [
+      {
+        latitude: 29.1211,
+        longitude: 106.7897 },
+
+      {
+        latitude: 29.3333,
+        longitude: 106.3333 }] });
+
+
+
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    handleClick: function handleClick() {
+      console.log(1);
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })

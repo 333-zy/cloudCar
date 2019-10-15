@@ -27,7 +27,10 @@
     "pages/partners/partners",
     "pages/partners/partnersDetails",
     "pages/main/mainDetails",
-    "pages/expert/expertDetails"
+    "pages/expert/expertDetails",
+    "pages/user/inspectionRecords/inspectionRecordsDetails",
+    "pages/healthEducation/healthEducationDetails",
+    "pages/healthEducation/healthEducationList"
   ],
   "subPackages": [],
   "window": {
@@ -66,5 +69,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap85.json"
 }

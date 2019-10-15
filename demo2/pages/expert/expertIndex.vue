@@ -39,7 +39,7 @@
 	}
 	.title{
 		color: #3CC51F;
-		font-size: 16upx;
+		font-size: 24upx;
 		padding: 0 20upx;
 	}
 </style>

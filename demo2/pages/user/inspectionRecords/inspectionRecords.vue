@@ -5,7 +5,7 @@
 			<view v-if="isShow==false" class="text">搜索宝宝</view>
 			<text>查询</text>
 		</view>
-		<view class="list" v-for="i in 13" hover-class="uni-list-cell-hover">
+		<view class="list" v-for="i in 13" hover-class="uni-list-cell-hover" @click="toInspectionRecordsDetails()">
 			<view class="list-top">
 				<view class="name">
 					小明
@@ -38,6 +38,11 @@
 		methods: {
 			inquire(){
 				this.isShow=true
+			},
+			toInspectionRecordsDetails(){
+				uni.navigateTo({
+					url:'inspectionRecordsDetails'
+				})
 			}
 		}
 	}

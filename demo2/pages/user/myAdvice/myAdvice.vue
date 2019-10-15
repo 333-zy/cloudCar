@@ -73,7 +73,7 @@
 	.time {
 		flex: 1;
 		color: #999999;
-		font-size: 18upx;
+		font-size: 24upx;
 		line-height: 3em;
 	}
 

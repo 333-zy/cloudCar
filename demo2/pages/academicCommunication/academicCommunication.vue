@@ -4,7 +4,7 @@
 			学术会议
 		</view>
 		<view class="uni-list">
-			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-if="index<2" v-for="(item,index) in 13" :key="index">
+			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-if="index<2" v-for="(item,index) in 13" :key="index" @click="toHealthEducationDetails('标题')">
 				<view class="uni-media-list">
 					<image class="uni-media-list-logo" src="../../static/img/user.png"></image>
 					<view class="uni-media-list-body">
@@ -14,7 +14,7 @@
 				</view>
 			</view>
 		</view>
-		<navigator url="">
+		<navigator url="../healthEducation/healthEducationList?name=学术会议">
 			<view class="">
 				查看更多
 			</view>
@@ -27,7 +27,7 @@
 			学术进展
 		</view>
 		<view class="uni-list">
-			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-if="index<2" v-for="(item,index) in 13" :key="index">
+			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-if="index<2" v-for="(item,index) in 13" :key="index" @click="toHealthEducationDetails('标题')">
 				<view class="uni-media-list">
 					<image class="uni-media-list-logo" src="../../static/img/user.png"></image>
 					<view class="uni-media-list-body">
@@ -37,7 +37,7 @@
 				</view>
 			</view>
 		</view>
-		<navigator url="">
+		<navigator url="../healthEducation/healthEducationList?name=学术进展">
 			<view class="">
 				查看更多
 			</view>
@@ -48,8 +48,17 @@
 	</view>
 </template>
 
-<script>
-</script>
+	<script>
+		export default{
+			methods:{
+				toHealthEducationDetails(e){
+					uni.navigateTo({
+						url:'../healthEducation/healthEducationDetails?name='+e
+					})
+				}
+			}
+		}
+	</script>
 
 <style>
 	.content {

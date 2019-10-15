@@ -155,6 +155,24 @@
 		    "style" : {
 				"navigationBarTitleText":"专家介绍"
 			}
+		},
+		{
+		    "path" : "pages/user/inspectionRecords/inspectionRecordsDetails",
+		    "style" : {
+				"navigationBarTitleText":"自查记录详情"
+			}
+		},
+		{
+		    "path" : "pages/healthEducation/healthEducationDetails",
+		    "style" : {
+				"navigationBarTitleText":"详情"
+			}
+		},
+		{
+		    "path" : "pages/healthEducation/healthEducationList",
+		    "style" : {
+				"navigationBarTitleText":"列表"
+			}
 		}
     ],
 	"tabBar": {

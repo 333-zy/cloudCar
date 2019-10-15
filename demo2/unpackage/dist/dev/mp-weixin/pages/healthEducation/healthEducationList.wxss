@@ -6,11 +6,4 @@
 	-webkit-line-clamp: 1;
 	overflow: hidden;
 }
-.name{
-}
-.title{
-	color: #3CC51F;
-	font-size: 24rpx;
-	padding: 0 20rpx;
-}
 
