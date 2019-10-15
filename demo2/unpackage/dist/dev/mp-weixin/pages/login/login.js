@@ -219,17 +219,17 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _interopRequireDefault(
                                       * 客户端对账号信息进行一些必要的校验。
                                       * 实际开发中，根据业务需要进行处理，这里仅做示例。
                                       */
-      if (this.mobile.length < 1)
-      return uni.showToast({
-        icon: 'none',
-        title: '手机号不能为空' });
+      // if (this.mobile.length < 1)
+      // 	return uni.showToast({
+      // 		icon: 'none',
+      // 		title: '手机号不能为空'
+      // 	});
 
-
-      if (this.password.length < 1)
-      return uni.showToast({
-        icon: 'none',
-        title: '密码不能为空' });
-
+      // if (this.password.length < 1)
+      // 	return uni.showToast({
+      // 		icon: 'none',
+      // 		title: '密码不能为空'
+      // 	});
 
       uni.reLaunch({
         url: '../main/main' });

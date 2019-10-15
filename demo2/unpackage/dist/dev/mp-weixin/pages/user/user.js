@@ -160,27 +160,27 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _objectSpread(target) {
     return {
       list: [{
         name: '宝宝信息',
-        url: '',
+        url: 'userBabyInfo/userBabyInfo',
         imgUrl: '' },
 
       {
         name: '我的信息',
-        url: '',
+        url: 'myInformation/myInformation',
         imgUrl: '' },
 
       {
         name: '我的咨询',
-        url: '',
+        url: 'myAdvice/myAdvice',
         imgUrl: '' },
 
       {
         name: '自查记录',
-        url: '',
+        url: 'inspectionRecords/inspectionRecords',
         imgUrl: '' },
 
       {
         name: '意见反馈',
-        url: '',
+        url: 'feedback/feedback',
         imgUrl: '' }] };
 
 
@@ -204,6 +204,11 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _objectSpread(target) {
           url: '../login/login' });
 
       }
+    },
+    toUserBabyInfo: function toUserBabyInfo(e) {
+      uni.navigateTo({
+        url: e });
+
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

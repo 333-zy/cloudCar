@@ -127,7 +127,7 @@
 	}
 
 	button.primary {
-		background-color: #0faeff;
+		background-color: #0faeff!important;
 	}
 
 	ul {

@@ -1,0 +1,14 @@
+
+.uni-media-list-body,.sex {
+	line-height: 3em;
+}
+.uni-media-list {
+	padding: 5rpx 20rpx;
+}
+button{
+	margin-bottom: 20rpx;
+}
+.uni-media-list-logo{
+	margin-right: 0;
+}
+

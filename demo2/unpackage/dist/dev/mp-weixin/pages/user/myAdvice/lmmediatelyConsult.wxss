@@ -1,0 +1,38 @@
+
+.inputs {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 70rpx;
+	line-height: 70rpx;
+	padding: 10rpx 30rpx;
+	border-bottom: 1rpx solid #ECECEC;
+}
+.li{
+	padding: 10rpx 30rpx;
+	border-bottom: 1rpx solid #ECECEC;
+}
+.inputs input {
+	height: 100%;
+	line-height: 2em;
+	padding: 0 20rpx;
+}
+.uni-textarea uni-textarea{
+	padding: 0;
+	height: 250rpx;
+}
+.wordCount{
+	text-align: right;
+	color: #B2B2B2;
+}
+.uni-list-cell::after{
+	background-color: #FFFFFF;
+}
+.uni-list-cell-pd{
+	padding: 0;
+}
+.cryptonymSwitch{
+	padding: 0 20rpx;
+}
+

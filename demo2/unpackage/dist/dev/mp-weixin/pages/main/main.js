@@ -215,7 +215,7 @@ var _vuex = __webpack_require__(/*! vuex */ 16); //
 //
 //
 //
-var _default = { computed: (0, _vuex.mapState)(['forcedLogin', 'hasLogin', 'userName']), data: function data() {return { list: [{ inco: '图标', name: '儿童自查', color: '#EB6DA5', url: '../childrenSwn/babyInformation' }, { inco: '图标', name: '生长记录', color: '#4FC1E9', url: '../rowthRecord/babyInfo' }, { inco: '图标', name: '健康宣教', color: '#307DC1', url: '' }, { inco: '图标', name: '学术交流', color: '#BAA8EB', url: '' }, { inco: '图标', name: '附近医院', color: '#3BCEAC', url: '' }, { inco: '图标', name: '合作伙伴', color: '#6BD425', url: '' }] };} };exports.default = _default;
+var _default = { computed: (0, _vuex.mapState)(['forcedLogin', 'hasLogin', 'userName']), data: function data() {return { list: [{ inco: '图标', name: '儿童自查', color: '#EB6DA5', url: '../childrenSwn/babyInformation' }, { inco: '图标', name: '生长记录', color: '#4FC1E9', url: '../rowthRecord/babyInfo' }, { inco: '图标', name: '健康宣教', color: '#307DC1', url: '../healthEducation/healthEducation' }, { inco: '图标', name: '学术交流', color: '#BAA8EB', url: '../academicCommunication/academicCommunication' }, { inco: '图标', name: '附近医院', color: '#3BCEAC', url: '../nearHospital/nearHospital' }, { inco: '图标', name: '合作伙伴', color: '#6BD425', url: '../partners/partners' }] };} };exports.default = _default;
 
 /***/ }),
 

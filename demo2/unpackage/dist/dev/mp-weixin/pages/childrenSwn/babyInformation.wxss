@@ -1,8 +1,5 @@
 
-.content{
-	padding: 20rpx;
-}
-navigator,.rowthRecord {
+navigator {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -18,11 +15,11 @@ navigator,.rowthRecord {
 	        justify-content: space-between;
 	border-bottom: 1rpx solid #D9D9D9;
 	height: 70rpx;
+	padding: 0 20rpx;
 }
 .button{
 	margin-top: 20rpx;
-	background: #0FAEFF;
-	width: 100%;
+	width: 90%;
 	color: #FFF5F6;
 }
 

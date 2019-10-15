@@ -8,7 +8,7 @@
 				点击修改
 			</view>
 		</navigator>
-			<button class="button" @tap="add">添加宝宝</button>
+			<button class="button primary" @tap="add">添加宝宝</button>
 	</view>
 </template>
 
@@ -57,7 +57,6 @@
 	}
 	.button{
 		margin-top: 20upx;
-		background: #0FAEFF;
 		width: 90%;
 		color: #FFF5F6;
 	}

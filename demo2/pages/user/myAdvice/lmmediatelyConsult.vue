@@ -17,7 +17,7 @@
 		</view>
 		<view class="li">
 			<view style="border-bottom: 1px solid #ECECEC;">请上传图片进行症状描述</view>
-			<button type="primary" style="background-color: #0FAEFF;">图片上传</button>
+			<button type="primary" class="primary">图片上传</button>
 			<!-- <view ref="input" class="input"></view> -->
 		</view>
 		<view class="li">

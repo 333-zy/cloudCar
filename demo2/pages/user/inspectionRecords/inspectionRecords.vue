@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<view class="search" @click="inquire">
-			<input v-if="isShow==true" :focus='true' type="text" value="" autofocus="autofocus" placeholder="搜索宝宝" />
+			<input v-if="isShow==true" :focus='true' type="text" value="" autofocus="autofocus" />
 			<view v-if="isShow==false" class="text">搜索宝宝</view>
 			<text>查询</text>
 		</view>
@@ -48,18 +48,23 @@
 	position: relative;
 	border: 20upx solid #EFEFF4;
 }
+.search input{
+	height: 50upx;
+	line-height: 50upx;
+	min-height: 50upx;
+}
 .search text{
 	position: absolute;
 	right: 0;
-	top: -14upx;
+	top: -10upx;
 	padding: 0 10upx;
 }
 .text{
 	text-align: center;
-	height: 45upx;
-	line-height: 45upx;
+	height: 50upx;
+	line-height: 50upx;
 	color: #808080;
-	font-size: 32upx;
+	font-size: 28upx;
 }
 .list{
 	padding: 0 20upx;

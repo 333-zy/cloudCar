@@ -8,8 +8,8 @@
             <view class="input-row border">
                 <text class="title">验证码：</text>
                 <m-input type="text" clearable v-model="code" placeholder="请输入验证码"></m-input>
-            	<button type="primary" @click="getCode">获取验证码</button>
             </view>
+            	<button class="button primary" type="primary" @click="getCode">获取验证码</button>
         </view>
 
         <view class="btn-row">
@@ -53,12 +53,17 @@
 </script>
 
 <style>
-.input-row button{
-	height: 60upx;
-	line-height: 60upx;
-	margin-top: 8upx;
-	background-color: #0faeff;
-	margin-right: 10upx;
-	font-size: 26upx;
-}
+.content {
+		position: relative;
+	}
+
+	.button {
+		position: absolute;
+		right: 10upx;
+		top: 87upx;
+		width: 200upx;
+		height: 60upx;
+		line-height: 60upx;
+		font-size: 26upx;
+	}
 </style>
