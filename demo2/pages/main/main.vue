@@ -1,8 +1,6 @@
 <template>
 	<view class="content">
-		<view class="top-img">
-
-		</view>
+		<image class="image" src="../../static/img/微信图片_20191015112444.jpg" mode="widthFix"></image>
 		<view class="navigation-function">
 			<view class="navigation-function-top">
 				<navigator v-if="index<2" v-for="(item,index) in list" :key="index" :style="{'background':item.color}" :url="item.url"
@@ -31,11 +29,11 @@
 			最新咨询
 		</view>
 		<view class="uni-list">
-			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(item,index) in 13" :key="index">
+			<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(item,index) in 13" :key="index" @click="toMainDetails('什么是自闭症?'+index)">
 				<view class="uni-media-list">
 					<image class="uni-media-list-logo" src="../../static/img/user.png"></image>
 					<view class="uni-media-list-body">
-						<view class="uni-media-list-text-top">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
+						<view class="uni-media-list-text-top">什么是自闭症?</view>
 						<view class="uni-media-list-text-bottom">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</view>
 					</view>
 				</view>
@@ -92,6 +90,13 @@
 				]
 			}
 		},
+		methods: {
+			toMainDetails(e) {
+				uni.navigateTo({
+					url: 'mainDetails?name=' + e
+				})
+			}
+		}
 		// onLoad() {
 		// 	if (!this.hasLogin) {
 		// 		uni.showModal({
@@ -124,9 +129,8 @@
 </script>
 
 <style>
-	.top-img {
-		height: 400upx;
-		background: #C8C7CC;
+	.image {
+		width: 100%;
 	}
 
 	.navigation-function {

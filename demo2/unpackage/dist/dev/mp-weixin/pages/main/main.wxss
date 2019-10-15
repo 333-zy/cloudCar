@@ -1,7 +1,6 @@
 
-.top-img {
-	height: 400rpx;
-	background: #C8C7CC;
+.image {
+	width: 100%;
 }
 .navigation-function {
 	padding: 10rpx;

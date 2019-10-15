@@ -122,9 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-
-
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -213,9 +211,46 @@ var _vuex = __webpack_require__(/*! vuex */ 16); //
 //
 //
 //
-//
-//
-var _default = { computed: (0, _vuex.mapState)(['forcedLogin', 'hasLogin', 'userName']), data: function data() {return { list: [{ inco: '图标', name: '儿童自查', color: '#EB6DA5', url: '../childrenSwn/babyInformation' }, { inco: '图标', name: '生长记录', color: '#4FC1E9', url: '../rowthRecord/babyInfo' }, { inco: '图标', name: '健康宣教', color: '#307DC1', url: '../healthEducation/healthEducation' }, { inco: '图标', name: '学术交流', color: '#BAA8EB', url: '../academicCommunication/academicCommunication' }, { inco: '图标', name: '附近医院', color: '#3BCEAC', url: '../nearHospital/nearHospital' }, { inco: '图标', name: '合作伙伴', color: '#6BD425', url: '../partners/partners' }] };} };exports.default = _default;
+var _default = { computed: (0, _vuex.mapState)(['forcedLogin', 'hasLogin', 'userName']), data: function data() {return { list: [{ inco: '图标', name: '儿童自查', color: '#EB6DA5', url: '../childrenSwn/babyInformation' }, { inco: '图标', name: '生长记录', color: '#4FC1E9', url: '../rowthRecord/babyInfo' }, { inco: '图标', name: '健康宣教', color: '#307DC1', url: '../healthEducation/healthEducation' }, { inco: '图标', name: '学术交流', color: '#BAA8EB', url: '../academicCommunication/academicCommunication' }, { inco: '图标', name: '附近医院', color: '#3BCEAC', url: '../nearHospital/nearHospital' }, { inco: '图标', name: '合作伙伴', color: '#6BD425', url: '../partners/partners' }] };
+
+  },
+  methods: {
+    toMainDetails: function toMainDetails(e) {
+      uni.navigateTo({
+        url: 'mainDetails?name=' + e });
+
+    } }
+
+  // onLoad() {
+  // 	if (!this.hasLogin) {
+  // 		uni.showModal({
+  // 			title: '未登录',
+  // 			content: '您未登录，需要登录后才能继续',
+  // 			/**
+  // 			 * 如果需要强制登录，不显示取消按钮
+  // 			 */
+  // 			showCancel: !this.forcedLogin,
+  // 			success: (res) => {
+  // 				if (res.confirm) {
+  // 					/**
+  // 					 * 如果需要强制登录，使用reLaunch方式
+  // 					 */
+  // 					if (this.forcedLogin) {
+  // 						uni.reLaunch({
+  // 							url: '../login/login'
+  // 						});
+  // 					} else {
+  // 						uni.navigateTo({
+  // 							url: '../login/login'
+  // 						});
+  // 					}
+  // 				}
+  // 			}
+  // 		});
+  // 	}
+  // }
+};exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

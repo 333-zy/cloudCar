@@ -1,0 +1,13 @@
+
+.content{
+	padding: 0 20rpx;
+}
+.title{
+	color: #289428;
+	font-size: 34rpx;
+	font-weight: bold;
+}
+.introduce{
+	text-indent: 2em;
+}
+

@@ -24,7 +24,10 @@
     "pages/user/myAdvice/lmmediatelyConsult",
     "pages/user/inspectionRecords/inspectionRecords",
     "pages/user/feedback/feedback",
-    "pages/partners/partners"
+    "pages/partners/partners",
+    "pages/partners/partnersDetails",
+    "pages/main/mainDetails",
+    "pages/expert/expertDetails"
   ],
   "subPackages": [],
   "window": {
@@ -63,6 +66,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap35.json"
+  "usingComponents": {}
 }

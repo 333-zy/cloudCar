@@ -84,9 +84,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
+  data: function data() {
+    return {};
+
+
+  },
   methods: {
+    toDetailsOfInquiryReply: function toDetailsOfInquiryReply() {
+      uni.navigateTo({
+        url: '../user/myAdvice/detailsOfInquiryReply',
+        animationType: 'slide-in-bottom',
+        animationDuration: 200 });
+
+    },
     toLmmediatelyConsult: function toLmmediatelyConsult() {
       uni.navigateTo({
         url: '../user/myAdvice/lmmediatelyConsult',

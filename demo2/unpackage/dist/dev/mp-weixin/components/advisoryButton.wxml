@@ -1,1 +1,0 @@
-<view class="advisory" id="animat" data-event-opts="{{[['tap',[['toLmmediatelyConsult',['$event']]]]]}}" bindtap="__e">咨询</view>

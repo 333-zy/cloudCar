@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -140,11 +140,24 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   data: function data() {
-    return {};
+    return {
+      list: [
+      { name: '中华医学会儿科分会发育行为儿科学组', url: '', imgUrl: '' },
+      { name: '中华预防医学会儿童保健分会', url: '', imgUrl: '' },
+      { name: '中国妇女儿童医疗卫生基金会', url: '', imgUrl: '' },
+      { name: '重庆医学会儿科分会', url: '', imgUrl: '' },
+      { name: '重庆医师协会儿科分会', url: '', imgUrl: '' },
+      { name: '中国医师协会儿科医师分会儿童保健专业委员会', url: '', imgUrl: '' }] };
 
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    toPartnersDetails: function toPartnersDetails(e) {
+      uni.navigateTo({
+        url: "partnersDetails?name=".concat(e) });
+
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

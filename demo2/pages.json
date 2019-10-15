@@ -137,7 +137,25 @@
             "style" : {
 				"navigationBarTitleText":"合作伙伴"
 			}
-        }
+        },
+		{
+		    "path" : "pages/partners/partnersDetails",
+		    "style" : {
+				"navigationBarTitleText":"介绍"
+			}
+		},
+		{
+		    "path" : "pages/main/mainDetails",
+		    "style" : {
+				"navigationBarTitleText":"介绍"
+			}
+		},
+		{
+		    "path" : "pages/expert/expertDetails",
+		    "style" : {
+				"navigationBarTitleText":"专家介绍"
+			}
+		}
     ],
 	"tabBar": {
 		"color": "#7a7e83",

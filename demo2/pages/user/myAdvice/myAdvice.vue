@@ -8,6 +8,9 @@
 				<view class="headPortrait">
 					头像
 				</view>
+				<view class="name">
+					匿名用戶
+				</view>
 				<view class="time">
 					2019-10-10 10:10:10
 				</view>
@@ -64,8 +67,14 @@
 		margin-right: 20upx;
 	}
 
+.name{
+	padding: 0 20upx;
+}
 	.time {
 		flex: 1;
+		color: #999999;
+		font-size: 18upx;
+		line-height: 3em;
 	}
 
 	.contentButtom {
@@ -80,6 +89,7 @@
 	.details {
 		height: 100upx;
 		line-height: 50upx;
+		color: #999999;
 	}
 
 	.title {
