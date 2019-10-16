@@ -38,7 +38,47 @@
 				头围曲线
 			</view>
 		</view>
-		<view class="dataGraph">
+		<view class="theHistoricalData" v-show="isActive==1">
+			<view class="title">
+				历史数据
+			</view>
+			<view class="describe">
+				小宝贝正在一天天长大呢，到医院检查时可以把这些给医生看哦
+			</view>
+			<view class="list">
+				<view class="li">
+					<view class="">
+						1天
+					</view>
+					<view class="">
+						测评时间：2019-10-16
+					</view>
+				</view>
+				<view class="li">
+					<view class="">
+						身高:2cm
+					</view>
+					<view class="">
+						体重:2kg
+					</view>
+					<view class="">
+						头围:2cm
+					</view>
+				</view>
+				<view class="li">
+					<view class="time">
+						记录时间:2019-10-16 15:05:04
+					</view>
+					<view class="">
+						<button type="primary" class="primary" @click="set()">修改</button>
+					</view>
+					<view class="">
+						<button type="primary" class="primary" @click="remove()">删除</button>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="dataGraph" v-show="isActive!=1">
 			<view class="qiun-bg-white qiun-title-bar qiun-common-mt" >
 				<view class="qiun-title-dot-light">基本曲线图</view>
 			</view>
@@ -87,6 +127,19 @@
 			this.getServerData();
 		},
 		methods: {
+			remove(){
+				uni.showModal({
+				    title: '提示',
+				    content: '确认删除吗?',
+				    success: function (res) {
+				        if (res.confirm) {
+				            console.log('用户点击确定');
+				        } else if (res.cancel) {
+				            console.log('用户点击取消');
+				        }
+				    }
+				});
+			},
 			handleSwitch(e) {
 				this.isActive=e
 			},
@@ -201,8 +254,38 @@
 		border-bottom: 4upx solid #F1CA73;
 		color: #EFA601;
 	}
-	.dataGraph{
+	.dataGraph,.theHistoricalData{
 		padding: 20upx;
+	}
+	.theHistoricalData .title{
+		background-color: #EFEFF4;
+		text-align: center;
+	}
+	.theHistoricalData .describe{
+		height: 2em;
+		line-height: 2em;
+		padding: 20upx 0;
+		border-bottom: 1upx solid #EFEFF4;
+		color: #00A0E9;
+		font-size: 24upx;
+	}
+	.li{
+		display: flex;
+		justify-content: space-between;
+	}
+	.li:not(:last-child) {
+		padding-bottom: 10upx;
+		border-bottom: 1upx solid #EFEFF4;
+	}
+	.li .time{
+		flex: 1;
+	}
+	.primary{
+		height: 50upx;
+		line-height: 50upx;
+		font-size: 28upx;
+		margin-top: 10upx;
+		margin-left: 10upx;
 	}
 	
 	/*样式的width和height一定要与定义的cWidth和cHeight相对应*/

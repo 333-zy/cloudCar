@@ -1,0 +1,1 @@
+<view class="content"><view class="img"><image src="../../static/img/qq.png" mode="widthFix"></image></view><view class="results">您的宝宝现阶段发育正常，如果您想了解宝宝现阶段护理建议，可以点击首页咨询按钮快速问医生。</view><button class="primary" type="primary" data-event-opts="{{[['tap',[['toRowthRecord',['$event']]]]]}}" bindtap="__e">进入生长曲线</button></view>

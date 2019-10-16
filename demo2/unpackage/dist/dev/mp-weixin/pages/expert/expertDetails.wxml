@@ -1,0 +1,1 @@
+<view class="content"><view class="uni-title uni-common-mt"><view><image src="../../static/img/7e3e6709c93d70cf533dd29ef2dcd100bba12b59.jpg" mode="widthFix"></image></view><view class="uni-common-mt" style="background:#FFF;padding:20rpx;"><rich-text nodes="{{strings}}"></rich-text></view></view></view>

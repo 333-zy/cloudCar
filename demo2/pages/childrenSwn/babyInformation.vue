@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<navigator v-for="i in 5" url="rowthRecord">
+		<navigator v-for="i in 5" url="healthInspection">
 			<view class="">
 				小明{{i}}
 			</view>

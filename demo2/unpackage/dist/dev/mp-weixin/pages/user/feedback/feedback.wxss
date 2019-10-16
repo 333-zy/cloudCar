@@ -1,0 +1,47 @@
+
+.inputs {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 70rpx;
+	line-height: 70rpx;
+	padding: 10rpx 30rpx;
+	border-bottom: 1rpx solid #ECECEC;
+}
+.inputs input {
+	height: 100%;
+	line-height: 2em;
+}
+.inputs view {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+.uni-list::before,
+.uni-list::after {
+	background-color: #FFFFFF;
+}
+.uni-input {
+	padding: 12rpx 0;
+}
+.unit {
+	padding: 0 10rpx;
+}
+.radio2 {
+	margin-left: 20rpx;
+}
+.li{
+	padding: 10rpx 30rpx;
+	border-bottom: 1rpx solid #ECECEC;
+}
+.wordCount{
+	text-align: right;
+	color: #B2B2B2;
+}
+.uni-textarea uni-textarea{
+	padding: 0;
+	height: 100rpx;
+}
+

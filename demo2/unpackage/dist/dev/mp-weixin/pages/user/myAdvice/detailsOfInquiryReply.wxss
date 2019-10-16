@@ -1,0 +1,59 @@
+
+.contentTop {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		padding: 0 20rpx;
+		border-bottom: 1rpx solid #F2F2F2;
+}
+.headPortrait {
+		margin-right: 20rpx;
+}
+.name{
+	padding: 0 20rpx;
+}
+.time {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		color: #999999;
+		line-height: 2.7em;
+}
+.contentButtom {
+		padding: 0 20rpx;
+}
+.title {
+		font-size: 34rpx;
+		line-height: 50rpx;
+		padding: 10rpx 0;
+}
+.contentButtom .content {
+		line-height: 40rpx;
+		text-indent: 2em;
+		text-align: justify;
+		color: #999999;
+}
+.hint{
+		text-align: center;
+		color: #999999;
+		padding: 10rpx;
+}
+.reply{
+		margin-top: 20rpx;
+		padding: 0 20rpx;
+		border-top: 10rpx solid #F5F5F5;
+}
+.replyContent{
+		height: 60rpx;
+		line-height: 40rpx;
+		text-align: justify;
+		color: #999999;
+}
+.reply .time{
+		text-align: right;
+		color: #999999;
+		padding: 10rpx 0;
+}
+

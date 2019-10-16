@@ -1,0 +1,45 @@
+
+.image {
+	width: 100%;
+}
+.round {
+	display: inline-block;
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background-color: #00A0E9;
+	margin-right: 10rpx;
+}
+.contentButtom text {
+	display: inline-block;
+	margin-right: 20rpx;
+}
+.describe {
+	height: 3em;
+	line-height: 1.5em;
+	padding-bottom: 10rpx;
+	border-bottom: 1rpx solid #EFEFF4;
+	color: #FF6600;
+}
+.contentButtom {
+	padding: 20rpx;
+}
+.list .title {
+	color: #66CFCF;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.list:not(:last-child) {
+	padding-bottom: 10rpx;
+	border-bottom: 20rpx solid #EFEFF4;
+}
+
+/* .list:last-child {
+	border-bottom: 1upx solid #EFEFF4;
+	padding-bottom: 20upx;
+} */
+.primary {
+	width: 95%;
+	margin: 20rpx auto;
+}
+

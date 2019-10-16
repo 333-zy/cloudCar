@@ -9,7 +9,7 @@
 			"path": "pages/main/main",
 			"style": {
 				"navigationBarTitleText": "首页",
-				"enablePullDownRefresh":true
+				"enablePullDownRefresh": true
 			}
 		}, {
 			"path": "pages/reg/reg",
@@ -49,133 +49,139 @@
 		}, {
 			"path": "pages/interaction/interactionIndex",
 			"style": {
-				"navigationBarTitleText": "咨询案例"
+				"navigationBarTitleText": "咨询案例",
+				"enablePullDownRefresh": true
 			}
 		}, {
 			"path": "pages/expert/expertIndex",
 			"style": {
 				"navigationBarTitleText": "专家介绍"
 			}
-		}
-	    ,{
-            "path" : "pages/healthEducation/healthEducation",
-            "style" : {
+		}, {
+			"path": "pages/healthEducation/healthEducation",
+			"style": {
 				"navigationBarTitleText": "健康宣教"
 			}
-        }
-        ,{
-            "path" : "pages/academicCommunication/academicCommunication",
-            "style" : {
+		}, {
+			"path": "pages/academicCommunication/academicCommunication",
+			"style": {
 				"navigationBarTitleText": "学术交流"
 			}
-        }
-        ,{
-            "path" : "pages/nearHospital/nearHospital",
-            "style" : {
+		}, {
+			"path": "pages/nearHospital/nearHospital",
+			"style": {
 				"navigationBarTitleText": "附近医院"
 			}
-        },{
-            "path" : "pages/user/userBabyInfo/userBabyInfo",
-            "style" : {
+		}, {
+			"path": "pages/user/userBabyInfo/userBabyInfo",
+			"style": {
 				"navigationBarTitleText": "宝宝信息"
 			}
-        },{
-            "path" : "pages/user/userBabyInfo/basicInformationOfBaby",
-            "style" : {
+		}, {
+			"path": "pages/user/userBabyInfo/basicInformationOfBaby",
+			"style": {
 				"navigationBarTitleText": "宝宝基本信息"
 			}
-        },{
-            "path" : "pages/user/userBabyInfo/setBabyInfo",
-            "style" : {
+		}, {
+			"path": "pages/user/userBabyInfo/setBabyInfo",
+			"style": {
 				"navigationBarTitleText": "修改基本信息"
 			}
-        }
-		
-        ,{
-            "path" : "pages/user/myInformation/myInformation",
-            "style" : {
-            	"navigationBarTitleText": "我的信息"
-            }
-        },
-		{
-		    "path" : "pages/user/myInformation/setMyInformation",
-		    "style" : {
-		    	"navigationBarTitleText": "修改基本信息"
-		    }
 		}
-        ,{
-            "path" : "pages/user/myAdvice/myAdvice",
-            "style" : {
-            	"navigationBarTitleText": "我的咨询"
-            }
-        },
-		{
-		    "path" : "pages/user/myAdvice/detailsOfInquiryReply",
-		    "style" : {
-		    	"navigationBarTitleText": "咨询回复详情"
-		    }
+
+		, {
+			"path": "pages/user/myInformation/myInformation",
+			"style": {
+				"navigationBarTitleText": "我的信息"
+			}
 		},
 		{
-		    "path" : "pages/user/myAdvice/lmmediatelyConsult",
-		    "style" : {
-		    	"navigationBarTitleText": "立即咨询"
-		    }
+			"path": "pages/user/myInformation/setMyInformation",
+			"style": {
+				"navigationBarTitleText": "修改基本信息"
+			}
+		}, {
+			"path": "pages/user/myAdvice/myAdvice",
+			"style": {
+				"navigationBarTitleText": "我的咨询"
+			}
+		},
+		{
+			"path": "pages/user/myAdvice/detailsOfInquiryReply",
+			"style": {
+				"navigationBarTitleText": "咨询回复详情"
+			}
+		},
+		{
+			"path": "pages/user/myAdvice/lmmediatelyConsult",
+			"style": {
+				"navigationBarTitleText": "立即咨询"
+			}
+		}, {
+			"path": "pages/user/inspectionRecords/inspectionRecords",
+			"style": {
+				"navigationBarTitleText": "自查记录"
+			}
+		}, {
+			"path": "pages/user/feedback/feedback",
+			"style": {
+				"navigationBarTitleText": "意见反馈"
+			}
+		}, {
+			"path": "pages/partners/partners",
+			"style": {
+				"navigationBarTitleText": "合作伙伴"
+			}
+		},
+		{
+			"path": "pages/partners/partnersDetails",
+			"style": {
+				"navigationBarTitleText": "介绍"
+			}
+		},
+		{
+			"path": "pages/main/mainDetails",
+			"style": {
+				"navigationBarTitleText": "介绍"
+			}
+		},
+		{
+			"path": "pages/expert/expertDetails",
+			"style": {
+				"navigationBarTitleText": "专家介绍"
+			}
+		},
+		{
+			"path": "pages/user/inspectionRecords/inspectionRecordsDetails",
+			"style": {
+				"navigationBarTitleText": "自查记录详情"
+			}
+		},
+		{
+			"path": "pages/healthEducation/healthEducationDetails",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
+			"path": "pages/healthEducation/healthEducationList",
+			"style": {
+				"navigationBarTitleText": "列表"
+			}
+		},
+		{
+			"path": "pages/childrenSwn/healthInspection",
+			"style": {
+				"navigationBarTitleText": "儿童发育与健康自查"
+			}
+		},
+		{
+			"path": "pages/childrenSwn/inspectionResults",
+			"style": {
+				"navigationBarTitleText": "自查结果"
+			}
 		}
-        ,{
-            "path" : "pages/user/inspectionRecords/inspectionRecords",
-            "style" : {
-            	"navigationBarTitleText": "自查记录"
-            }
-        }
-        ,{
-            "path" : "pages/user/feedback/feedback",
-            "style" : {
-            	"navigationBarTitleText": "意见反馈"
-            }
-        }
-        ,{
-            "path" : "pages/partners/partners",
-            "style" : {
-				"navigationBarTitleText":"合作伙伴"
-			}
-        },
-		{
-		    "path" : "pages/partners/partnersDetails",
-		    "style" : {
-				"navigationBarTitleText":"介绍"
-			}
-		},
-		{
-		    "path" : "pages/main/mainDetails",
-		    "style" : {
-				"navigationBarTitleText":"介绍"
-			}
-		},
-		{
-		    "path" : "pages/expert/expertDetails",
-		    "style" : {
-				"navigationBarTitleText":"专家介绍"
-			}
-		},
-		{
-		    "path" : "pages/user/inspectionRecords/inspectionRecordsDetails",
-		    "style" : {
-				"navigationBarTitleText":"自查记录详情"
-			}
-		},
-		{
-		    "path" : "pages/healthEducation/healthEducationDetails",
-		    "style" : {
-				"navigationBarTitleText":"详情"
-			}
-		},
-		{
-		    "path" : "pages/healthEducation/healthEducationList",
-		    "style" : {
-				"navigationBarTitleText":"列表"
-			}
-		}
-    ],
+	],
 	"tabBar": {
 		"color": "#7a7e83",
 		"selectedColor": "#0faeff",
@@ -185,12 +191,12 @@
 			"text": "首页",
 			"iconPath": "static/img/home.png",
 			"selectedIconPath": "static/img/homeHL.png"
-		},{
+		}, {
 			"pagePath": "pages/interaction/interactionIndex",
 			"text": "互动咨询",
 			"iconPath": "static/img/user.png",
 			"selectedIconPath": "static/img/user.png"
-		},{
+		}, {
 			"pagePath": "pages/expert/expertIndex",
 			"text": "专家介绍",
 			"iconPath": "static/img/user.png",

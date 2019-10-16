@@ -1,0 +1,8 @@
+
+.content{
+	padding: 0 20rpx;
+}
+.details{
+	text-indent: 2em;
+}
+

@@ -34,6 +34,17 @@
 
 			}
 		},
+		//下拉刷新
+		onPullDownRefresh() {
+			console.log('下拉刷新');
+			setTimeout(function() {
+				uni.stopPullDownRefresh({
+					success(){
+						console.log('下拉刷新结束')
+					}
+				});
+			}, 1000);
+		},
 		methods: {
 			toDetailsOfInquiryReply() {
 				uni.navigateTo({

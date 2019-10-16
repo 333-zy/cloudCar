@@ -104,21 +104,21 @@
 				 * 检测用户账号密码是否在已注册的用户列表中
 				 * 实际开发中，使用 uni.request 将账号信息发送至服务端，客户端在回调函数中获取结果信息。
 				 */
-				const data = {
-					account: this.account,
-					password: this.password
-				};
-				const validUser = service.getUsers().some(function(user) {
-					return data.mobile === user.mobile && data.password === user.password;
-				});
-				if (!validUser) {
-					this.toMain(this.mobile);
-				} else {
-					uni.showToast({
-						icon: 'none',
-						title: '用户账号或密码不正确',
-					});
-				}
+				// const data = {
+				// 	account: this.account,
+				// 	password: this.password
+				// };
+				// const validUser = service.getUsers().some(function(user) {
+				// 	return data.mobile === user.mobile && data.password === user.password;
+				// });
+				// if (!validUser) {
+				// 	this.toMain(this.mobile);
+				// } else {
+				// 	uni.showToast({
+				// 		icon: 'none',
+				// 		title: '用户账号或密码不正确',
+				// 	});
+				// }
 			},
 			oauth(value) {
 				uni.login({
