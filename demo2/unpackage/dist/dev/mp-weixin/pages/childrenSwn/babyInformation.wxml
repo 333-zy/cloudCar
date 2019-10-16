@@ -1,1 +1,0 @@
-<view class="content"><block wx:for="{{5}}" wx:for-item="i" wx:for-index="__i0__"><navigator url="rowthRecord"><view>{{'小明'+i+''}}</view><view>点击修改</view></navigator></block><button data-event-opts="{{[['tap',[['add',['$event']]]]]}}" class="button primary" bindtap="__e">添加宝宝</button></view>

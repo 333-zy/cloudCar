@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<image class="image" src="../../static/img/微信图片_20191015112444.jpg" mode="widthFix"></image>
+		<image class="image" src="../../static/img/20191015112444.jpg" mode="widthFix"></image>
 		<view class="navigation-function">
 			<view class="navigation-function-top">
 				<navigator v-if="index<2" v-for="(item,index) in list" :key="index" :style="{'background':item.color}" :url="item.url"

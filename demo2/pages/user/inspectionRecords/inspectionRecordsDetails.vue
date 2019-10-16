@@ -2,7 +2,7 @@
 	<view class="content">
 		<view class="contentTop">
 			<view class="contentTopImg">
-				<image src="../../../static/img/微信图片_20191015112444.jpg" mode=""></image>
+				<image src="../../../static/img/20191015112444.jpg" mode=""></image>
 			</view>
 			<view class="contentTopInfo">
 				<view class="name">

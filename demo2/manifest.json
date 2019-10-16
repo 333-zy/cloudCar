@@ -63,5 +63,17 @@
     },
     "mp-toutiao" : {
         "usingComponents" : true
+    },
+    "h5" : {
+        "devServer" : {
+            "port" : "",
+            "https" : true
+        },
+        "router" : {
+            "mode" : "history",
+            "base" : ""
+        },
+        "title" : "",
+        "domain" : "127.0.0.1:80"
     }
 }
