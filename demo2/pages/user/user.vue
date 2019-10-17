@@ -1,10 +1,11 @@
 <template>
 	<view class="content">
 		<view class="top-img">
-			<image src="../../static/img/qq.png" mode="aspectFit"></image>
+			<image :src="userImg" mode="aspectFit"></image>
 		</view>
 		<view class="uni-list">
-			<view class="uni-list-cell" hover-class="uni-list-cell-hover" @tap="toUserBabyInfo(item.url)" v-for="(item,index) in list" :key="index">
+			<view class="uni-list-cell" hover-class="uni-list-cell-hover" @tap="toUserBabyInfo(item.url)" v-for="(item,index) in list"
+			 :key="index">
 				<view class="uni-media-list">
 					<image class="uni-media-list-logo" src="../../static/img/homeHL.png"></image>
 					<view class="uni-media-list-body">
@@ -32,8 +33,40 @@
 		computed: {
 			...mapState(['hasLogin', 'forcedLogin'])
 		},
+		onLoad() {
+			let _this = this;
+			uni.login({
+				provider: 'weixin',
+				success: function(info) {
+					console.log(info)
+					uni.getUserInfo({
+						provider: 'weixin',
+						success: function(infoRes) {
+							console.log(infoRes)
+							console.log('用户昵称为：' + infoRes.userInfo.nickName);
+							console.log('用户昵称为：' + infoRes.userInfo.avatarUrl);
+							_this.userImg = infoRes.userInfo.avatarUrl;
+							uni.request({
+								method:'GET',
+								url:`https://api.weixin.qq.com/sns/jscode2session?appid=wxb160d9138f3c51b7&secret=166ecf8012ec8b6bbbd0c91c5aae03e5&js_code=${info.code}&grant_type=authorization_code`,
+								success: (e) => {
+									console.log(e)
+								},
+								fail: (err) => {
+									console.log(err)
+								}
+							})
+						}
+					});
+				},
+				fail: (err) => {
+					console.log(err)
+				}
+			})
+		},
 		data() {
 			return {
+				userImg: '',
 				list: [{
 						name: '宝宝信息',
 						url: 'userBabyInfo/userBabyInfo',
@@ -81,9 +114,9 @@
 					});
 				}
 			},
-			toUserBabyInfo(e){
+			toUserBabyInfo(e) {
 				uni.navigateTo({
-					url:e
+					url: e
 				})
 			}
 		}
@@ -91,19 +124,20 @@
 </script>
 
 <style>
-	.top-img{
+	.top-img {
 		text-align: center;
 		padding: 20upx;
 		height: 200upx;
 	}
-	
-	.top-img image{
+
+	.top-img image {
 		margin-top: 30upx;
 		width: 150upx;
 		height: 150upx;
 		border: 1upx solid #C0C0C0;
 		border-radius: 50%;
 	}
+
 	.uni-media-list {
 		padding: 5upx 20upx;
 	}

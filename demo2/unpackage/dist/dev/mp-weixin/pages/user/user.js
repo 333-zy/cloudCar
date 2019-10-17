@@ -147,6 +147,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var _vuex = __webpack_require__(/*! vuex */ 16);function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 
 
@@ -156,8 +157,40 @@ var _vuex = __webpack_require__(/*! vuex */ 16);function _objectSpread(target) {
   computed: _objectSpread({},
   (0, _vuex.mapState)(['hasLogin', 'forcedLogin'])),
 
+  onLoad: function onLoad() {
+    var _this = this;
+    uni.login({
+      provider: 'weixin',
+      success: function success(info) {
+        console.log(info);
+        uni.getUserInfo({
+          provider: 'weixin',
+          success: function success(infoRes) {
+            console.log(infoRes);
+            console.log('用户昵称为：' + infoRes.userInfo.nickName);
+            console.log('用户昵称为：' + infoRes.userInfo.avatarUrl);
+            _this.userImg = infoRes.userInfo.avatarUrl;
+            uni.request({
+              method: 'GET',
+              url: "https://api.weixin.qq.com/sns/jscode2session?appid=wxb160d9138f3c51b7&secret=166ecf8012ec8b6bbbd0c91c5aae03e5&js_code=".concat(info.code, "&grant_type=authorization_code"),
+              success: function success(e) {
+                console.log(e);
+              },
+              fail: function fail(err) {
+                console.log(err);
+              } });
+
+          } });
+
+      },
+      fail: function fail(err) {
+        console.log(err);
+      } });
+
+  },
   data: function data() {
     return {
+      userImg: '',
       list: [{
         name: '宝宝信息',
         url: 'userBabyInfo/userBabyInfo',

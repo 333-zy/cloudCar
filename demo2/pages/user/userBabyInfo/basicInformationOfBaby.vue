@@ -8,7 +8,7 @@
 				<image class="uni-media-list-logo" src="../../../static/img/user.png"></image>
 			</view>
 		</view>
-		<view class="uni-list-cell" hover-class="uni-list-cell-hover" @tap="toUserBabyInfo" v-for="(item,index) in data" :key="index">
+		<view class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(item,index) in data" :key="index">
 			<view class="uni-media-list">
 				<view class="uni-media-list-body">
 					{{item.name}}

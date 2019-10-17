@@ -49,11 +49,15 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wxb160d9138f3c51b7",
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : false,
+            "es6" : true,
+            "postcss" : true,
+            "minified" : true
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+        "permission" : {}
     },
     "mp-alipay" : {
         "usingComponents" : true
@@ -73,7 +77,15 @@
             "mode" : "history",
             "base" : ""
         },
-        "title" : "",
-        "domain" : "127.0.0.1:80"
+        "title" : "html5",
+        "domain" : "",
+        "template" : "",
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : ""
+                }
+            }
+        }
     }
 }
