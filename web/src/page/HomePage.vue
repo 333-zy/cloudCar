@@ -18,8 +18,50 @@
         </div>
       </div>
     </div>
+
     <div class="banner">
       <img src="../../static/img/banner.png" />
+    </div>
+
+    <div class="function">
+      <div class="order">
+        <div class="select-info">
+          <div class="order">
+            <span>始发地</span>
+            <select>
+              <option>请选择省份市区</option>
+            </select>
+          </div>
+          <div class="order">
+            <span>目的地</span>
+            <select>
+              <option>请选择省份市区</option>
+            </select>
+          </div>
+          <div class="order">
+            <span>车辆类型</span>
+            <select>
+              <option>请选择省份市区</option>
+            </select>
+          </div>
+          <div class="order">
+            <span>联系电话</span>
+            <input placeholder="请输入你的联系电话" />
+          </div>
+        </div>
+        <div class="handleOrder">
+          <img src="../../static/img/矢量智能对象(3).png" />
+          <p>运单查询</p>
+        </div>
+        <div class="handleOrder">
+          <img src="../../static/img/矢量智能对象@2x(2).png" />
+          <p>我要托运</p>
+        </div>
+        <div class="handleOrder">
+          <img src="../../static/img/矢量智能对象@2x(4).png" />
+          <p>网点查询</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -44,8 +86,7 @@
 
 <style>
   .top{
-    min-width: 1200px;
-    width: 70%;
+    width: 60%;
     margin: auto;
   }
   .navigation-bar{
@@ -107,5 +148,58 @@
   .banner img{
     width: 100%;
     height: 100%;
+  }
+
+  .function{
+    width: 60%;
+    height: 438px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -60px;
+    padding: 50px 30px 0;
+  }
+  .order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .order div{
+    margin-bottom: 10px;
+  }
+  .order span{
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+  }
+  .order select{
+    width: 250px;
+    border-radius: 25px;
+    border: 1px solid #DCDCDC;
+    padding: 2px 20px;
+  }
+  .order input{
+    width: 207px;
+    border-radius: 25px;
+    border: 1px solid #DCDCDC;
+    padding: 4.5px 20px;
+  }
+  .select-info{
+  }
+  .handleOrder{
+    width: 98px;
+    height: 70px;
+    background: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .handleOrder img{
+    width: 30px;
+    height: 30px;
   }
 </style>

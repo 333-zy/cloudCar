@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style>
-body{
+body,p{
   margin: 0;
 }
 #app {
